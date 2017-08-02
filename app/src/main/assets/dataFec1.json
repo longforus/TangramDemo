@@ -1,0 +1,204 @@
+[
+  {
+    "id":"lunbo1",
+    "type": "10",
+    "style": {
+      "indicatorImg1": "https://gw.alicdn.com/tps/TB16RaxLpXXXXbIXFXXXXXXXXXX-14-14.png",
+      "indicatorImg2": "https://gw.alicdn.com/tps/TB1m79uLpXXXXXUXVXXXXXXXXXX-18-16.png",
+      "indicatorGravity": "center",
+      "indicatorPosition": "inside",
+      "indicatorMargin": 10,
+      "indicatorGap": 2,
+      "scrollMarginLeft": 10,
+      "autoScroll": 3000,
+      "infinite": true,
+      "scrollMarginRight": 10,
+      "hGap": 6,
+      "bgColor": "#ffffff"
+    },
+    "items": [
+      {
+        "type": 1,
+        "msg": "轮播1",
+        "imgUrl": "http://i1.bbs.fd.zol-img.com.cn/t_s1200x5000/g5/M00/06/09/ChMkJlmBRyWIW8N4AATrLtHU5xkAAfVsQETHJ4ABOtG697.jpg",
+        "style": {
+        }
+      },
+      {
+        "type": 1,
+        "msg": "lunbo轮播2",
+        "imgUrl": "http://i3.bbs.fd.zol-img.com.cn/t_s1200x5000/g5/M00/06/09/ChMkJlmBRzqIA-IJAAR30BHws1AAAfVsQFTAnEABHfo643.jpg",
+        "style": {
+        }
+      },
+      {
+        "type": 1,
+        "msg": "轮播3",
+        "imgUrl": "http://i4.bbs.fd.zol-img.com.cn/t_s1200x5000/g5/M00/06/09/ChMkJlmBRzyIMuajAATcVXC9GeYAAfVsQFaLy4ABNxt604.jpg",
+        "style": {
+        }
+      }
+    ]
+  },
+  {
+    "id": "banner2",
+    "type": 2,
+    "style": {
+      "margin":[10,0,0,0],
+      "hGap": 3
+    },
+    "items": [
+      {
+        "bizId": "item1",
+        "type": 1,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/73/1501499616573.jpg",
+        "msg": "guding固定1"
+      },
+      {
+        "bizId": "item2",
+        "type": 1,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/44/1500946808044.jpg",
+        "msg": "guding固定2"
+      }
+    ]
+  },
+  {
+    "id": "banner2",
+    "type": 1,
+    "style": {
+      "margin":[10,0,0,0]
+    },
+    "header": {
+      "type": 2,
+      "textSize": 18,
+      "color": "#000000",
+      "msg": "今日特卖"
+    },
+    "items": [
+      {
+        "bizId": "item1",
+        "type": 1,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/15/1501516615515.jpg",
+        "msg": "guding固定3"
+      },
+      {
+        "bizId": "item2",
+        "type": 1,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/70/1501160873270.jpg",
+        "msg": "guding固定4",
+        "style": {
+          "margin":[2,0,0,0]
+        }
+      },
+      {
+        "bizId": "item3",
+        "type": 1,
+        "imgUrl": "http://i1.bbs.fd.zol-img.com.cn/t_s235x235c2/g5/M00/02/00/ChMkJ1lbKQ2IUvPBAAD7VX5q8pgAAeDTwIQxLkAAPtt377.jpg",
+        "msg": "guding固定5",
+        "style": {
+          "margin":[2,0,0,0]
+        }
+      }
+    ],
+    "footer": {
+      "type": 3,
+      "textSize": 18,
+      "color": "#000000",
+      "msg": "进口酒系列 "
+    }
+  },
+  {
+    "id": "banner3",
+    "type": 2,
+    "style": {
+      "margin":[10,0,0,0],
+      "vGap":3,
+      "hGap":3
+    },
+    "header": {
+      "type": 2,
+      "textSize": 18,
+      "color": "#000000",
+      "msg": "新品推荐"
+    },
+    "items": [
+      {
+        "bizId": "item1",
+        "type": 4,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/15/1501516615515.jpg",
+        "msg": "雪花啤酒,勇闯天涯"
+      },
+      {
+        "bizId": "item2",
+        "type": 4,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/70/1501160873270.jpg",
+        "msg": "百威"
+      },
+      {
+        "bizId": "item3",
+        "type":4,
+        "imgUrl": "http://i1.bbs.fd.zol-img.com.cn/t_s235x235c2/g5/M00/02/00/ChMkJ1lbKQ2IUvPBAAD7VX5q8pgAAeDTwIQxLkAAPtt377.jpg",
+        "msg": "上火就喝加多宝"
+      },
+      {
+        "bizId": "item3",
+        "type": 4,
+        "imgUrl": "http://i1.bbs.fd.zol-img.com.cn/t_s235x235c2/g5/M00/02/00/ChMkJ1lbKQ2IUvPBAAD7VX5q8pgAAeDTwIQxLkAAPtt377.jpg",
+        "msg": "墨西哥的味道-科罗娜"
+      }
+    ]
+  },
+  {
+    "id": "banner4",
+    "type": 5,
+    "style": {
+      "margin":[10,0,0,0],
+      "cols":[40,60],
+      "rows":[50,50]
+    },
+    "items": [
+      {
+        "bizId": "item1",
+        "type": 4,
+        "imgUrl": "http://pic.xiami.net/images/common/uploadpic/15/1501516615515.jpg",
+        "msg": "雪花啤酒,勇闯天涯",
+        "style": {
+          "margin":[0,1,0,0]
+        }
+      },
+      {
+        "bizId": "item2",
+        "type": 1,
+        "imgUrl": "http://img4.imgtn.bdimg.com/it/u=1098697664,2045282804&fm=26&gp=0.jpg",
+        "msg": "百威",
+        "style": {
+          "margin":[0,0,1,0]
+        }
+      },
+      {
+        "bizId": "item3",
+        "type":1,
+        "imgUrl": "http://img3.imgtn.bdimg.com/it/u=2289627214,4212197637&fm=26&gp=0.jpg",
+        "msg": "上火就喝加多宝",
+        "style": {
+          "margin":[0,1,0,0]
+        }
+      },
+      {
+        "bizId": "item3",
+        "type": 1,
+        "imgUrl": "http://i1.bbs.fd.zol-img.com.cn/t_s235x235c2/g5/M00/02/00/ChMkJ1lbKQ2IUvPBAAD7VX5q8pgAAeDTwIQxLkAAPtt377.jpg",
+        "msg": "墨西哥的味道-科罗娜",
+        "style": {
+          "margin":[0,1,0,0]
+        }
+      },
+      {
+        "bizId": "item4",
+        "type":1,
+        "imgUrl": "http://img4.imgtn.bdimg.com/it/u=3135258808,233131092&fm=26&gp=0.jpg",
+        "msg": "轩尼诗"
+      }
+    ]
+  }
+]
