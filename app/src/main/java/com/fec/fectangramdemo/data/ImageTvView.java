@@ -26,6 +26,7 @@ package com.fec.fectangramdemo.data;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -82,7 +83,19 @@ public class ImageTvView extends FrameLayout implements ITangramViewLifeCycle {
     @Override
     public void postBindView(BaseCell cell) {
         int pos = cell.pos;
-        ImageUtils.doLoadImageUrl(iv,cell.optStringParam("imgUrl"));
+        if (cell.optBoolParam("nocache")) {
+            iv.setTag("noCache");
+        }
+        if (cell.style!=null&&cell.extras.optString("msg").equals("浮动布局")) {
+            ViewGroup.LayoutParams params = iv.getLayoutParams();
+            params.height = cell.style.height;
+            params.width = cell.style.width;
+            iv.setLayoutParams(params);
+            tv.setLayoutParams(params);
+            setLayoutParams(params);
+        }
+
+        ImageUtils.doLoadImageUrl(iv, cell.optStringParam("imgUrl"));
         tv.setText(cell.optStringParam("msg"));
     }
 
