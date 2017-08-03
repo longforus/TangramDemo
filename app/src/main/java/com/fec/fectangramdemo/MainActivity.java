@@ -29,6 +29,7 @@ import com.tmall.wireless.tangram.TangramBuilder;
 import com.tmall.wireless.tangram.TangramEngine;
 import com.tmall.wireless.tangram.core.adapter.GroupBasicAdapter;
 import com.tmall.wireless.tangram.dataparser.concrete.Card;
+import com.tmall.wireless.tangram.eventbus.BusSupport;
 import com.tmall.wireless.tangram.structure.BaseCell;
 import com.tmall.wireless.tangram.support.SimpleClickSupport;
 import com.tmall.wireless.tangram.support.async.AsyncLoader;
@@ -81,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
         engine.register(SimpleClickSupport.class, new SimpleClickSupport(){
             @Override
             public void defaultClick(View targetView, BaseCell cell, int type) {
+                if (cell.extras.optString("msg").equals("浮动布局")) {
+                    BusSupport bus = engine.getService(BusSupport.class);//发送event
+                    bus.post(BusSupport.obtainEvent("floatClick", cell.id, null, null));
+                }
                 Toast.makeText(MainActivity.this, "点击了控件 type:"+type+"  msg:"+cell.extras.optString("msg"), Toast.LENGTH_SHORT).show();
             }
         });

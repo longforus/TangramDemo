@@ -30,8 +30,12 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import com.fec.fectangramdemo.R;
+import com.tmall.wireless.tangram.eventbus.BusSupport;
+import com.tmall.wireless.tangram.eventbus.Event;
+import com.tmall.wireless.tangram.eventbus.EventHandlerWrapper;
 import com.tmall.wireless.tangram.structure.BaseCell;
 import com.tmall.wireless.tangram.structure.view.ITangramViewLifeCycle;
+import com.tmall.wireless.tangram.util.LogUtils;
 
 /**
  * Created by villadora on 15/8/24.
@@ -39,6 +43,7 @@ import com.tmall.wireless.tangram.structure.view.ITangramViewLifeCycle;
 public class SimpleTitleView extends FrameLayout implements ITangramViewLifeCycle {
     private TextView textView;
     private BaseCell cell;
+    private EventHandlerWrapper mWrapper;
 
     public SimpleTitleView(Context context) {
         super(context);
@@ -55,27 +60,47 @@ public class SimpleTitleView extends FrameLayout implements ITangramViewLifeCycl
         init();
     }
 
-    private void init(){
+    private void init() {
         inflate(getContext(), R.layout.item_title, this);
         textView = (TextView) findViewById(R.id.title);
     }
 
     @Override
     public void cellInited(BaseCell cell) {
+
+        mWrapper = BusSupport.wrapEventHandler("floatClick", null, this, "onFloat");
+        BusSupport service = null;
+        if (cell.serviceManager != null) {//注册事件接收
+            service = cell.serviceManager.getService(BusSupport.class);
+            service.register(mWrapper);
+        }
+
         setOnClickListener(cell);
         this.cell = cell;
     }
 
+    public void onFloat(Event event) {
+        LogUtils.i(TAG,this+"接收到总线事件  type:"+event.type);
+        textView.setText("总线event");
+    }
+
+    private static final String TAG = "SimpleTitleView";
     @Override
     public void postBindView(BaseCell cell) {
         int pos = cell.pos;
         textView.setText(cell.optStringParam("msg"));
         textView.setTextSize(cell.optIntParam("textSize"));
         textView.setTextColor(Color.parseColor(cell.optStringParam("color")));
-
     }
 
     @Override
     public void postUnBindView(BaseCell cell) {
+        BusSupport service = null;
+        if (cell.serviceManager != null) {
+            service = cell.serviceManager.getService(BusSupport.class);
+        }
+        if (service!=null&&mWrapper!=null) {
+            service.unregister(mWrapper);
+        }
     }
 }
