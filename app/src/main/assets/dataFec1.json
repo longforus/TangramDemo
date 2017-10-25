@@ -125,13 +125,13 @@
     "items": [
       {
         "bizId": "item1",
-        "type": 4,
+        "type": 5,
         "imgUrl": "http://pic.xiami.net/images/common/uploadpic/15/1501516615515.jpg",
         "msg": "雪花啤酒,勇闯天涯"
       },
       {
         "bizId": "item2",
-        "type": 4,
+        "type": 10,
         "imgUrl": "http://pic.xiami.net/images/common/uploadpic/70/1501160873270.jpg",
         "msg": "百威"
       },

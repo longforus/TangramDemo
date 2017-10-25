@@ -30,6 +30,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.fec.fectangramdemo.MyService;
 import com.fec.fectangramdemo.R;
 import com.tmall.wireless.tangram.structure.BaseCell;
 import com.tmall.wireless.tangram.structure.view.ITangramViewLifeCycle;
@@ -77,6 +78,8 @@ public class ImageTvView extends FrameLayout implements ITangramViewLifeCycle {
     @Override
     public void cellInited(BaseCell cell) {
         setOnClickListener(cell);
+        MyService service = cell.serviceManager.getService(MyService.class);
+        service.testService();
         this.cell = cell;
     }
 
